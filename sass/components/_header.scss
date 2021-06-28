@@ -1,0 +1,94 @@
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 80px;
+  background-color: $white;
+  border-bottom: 1px solid #ececec;
+}
+
+.header .logo {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.header__menu {
+  margin-left: 93px;
+}
+
+.header__contacts-list {
+  margin-left: auto;
+}
+
+.header__item,
+.header__item > .header__link,
+.header__item > .contacts__link {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.header__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.header__link {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: $dark-shade;
+  text-decoration: none;
+
+  &--active,
+  &:hover,
+  &:focus {
+    color: $brand-color;
+    transition: color $animation;
+  }
+
+  &--active::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    background-color: #2196f3;
+    border-radius: 2px;
+  }
+}
+
+.contacts__link {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: $dark-shade;
+  text-decoration: none;
+  color: $light-shade;
+  transition: color $animation;
+
+  &:hover,
+  &:focus {
+    color: $brand-color;
+  }
+}
+
+.contacts__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.contacts__icon {
+  height: 100%;
+  margin-right: 10px;
+
+  &--email {
+    width: 16px;
+  }
+
+  &--phone {
+    width: 10px;
+  }
+}

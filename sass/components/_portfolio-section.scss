@@ -1,0 +1,119 @@
+.filter__options {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.filter__item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.filter__button {
+  padding: 6px 22px;
+  border-radius: 4px;
+  background-color: $brand-color;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  background-color: #f5f4fa;
+  color: $dark-shade;
+  border: none;
+  cursor: pointer;
+  transition-property: color, background-color, box-shadow;
+  transition: $animation;
+
+  &:hover,
+  &:focus {
+    background-color: $brand-color;
+    color: $white;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.project__list {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project__thumbnail,
+.project__link {
+  display: block;
+}
+
+.project__item {
+  margin-right: 30px;
+  margin-bottom: 30px;
+
+  &:nth-child(3n + 3) {
+    margin-right: 0;
+  }
+
+  &:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+  }
+}
+
+.project__link {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+    transition: box-shadow $animation;
+  }
+}
+
+.project__animation-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.project__animation-content {
+  position: absolute;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+  transition: transform $animation;
+
+  & > p {
+    font-size: 18px;
+    line-height: 1.55;
+    color: $white;
+  }
+}
+
+.project__link:hover .project__animation-content,
+.project__link:focus .project__animation-content {
+  transform: translateY(-100%);
+}
+
+.project__info {
+  padding: 20px 24px;
+  background: #ffffff;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.project__info-heading {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: $dark-shade;
+}
+
+.project__info-description {
+  font-size: 16px;
+  line-height: 1.87;
+  color: $light-shade;
+}
