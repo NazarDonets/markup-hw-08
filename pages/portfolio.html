@@ -66,6 +66,73 @@
             >
           </li>
         </ul>
+        <button type="button" class="header__menu-button" data-menu-button>
+          <svg class="header__menu-icon" height="40" width="40">
+            <use
+              class="header__menu-icon--collapsed"
+              href="./../icons/icons.svg#icon-header-menu-collapsed"
+            ></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-menu" data-menu>
+        <button
+          type="button"
+          class="header__menu-button--close"
+          data-menu-close
+        >
+          <svg class="header__menu-icon" height="40" width="40">
+            <use
+              class="header__menu-icon--opened"
+              href="./../icons/icons.svg#icon-header-menu-opened"
+            ></use>
+          </svg>
+        </button>
+        <div class="container mobile-menu__container">
+          <ul class="mobile-menu__nav">
+            <li class="mobile-menu__item">
+              <a href="./../index.html" class="mobile-menu__link">Студия</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a
+                href="./portfolio.html"
+                class="mobile-menu__link mobile-menu__link--is-active"
+                >Портфолио</a
+              >
+            </li>
+            <li class="mobile-menu__item">
+              <a href="" class="mobile-menu__link">Контакты</a>
+            </li>
+          </ul>
+          <ul class="mobile-menu__contacts">
+            <li class="mobile-menu__contacts-item">
+              <a href="tel:+380961111111" class="mobile-menu__contacts-link"
+                >+38 096 111 11 11</a
+              >
+            </li>
+            <li class="mobile-menu__contacts-item">
+              <a
+                href="mailto:info@devstudio.com"
+                class="mobile-menu__contacts-link"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-menu__socials">
+            <li class="mobile-menu__socials-item">
+              <a href="" class="mobile-menu__socials-link">Instagram</a>
+            </li>
+            <li class="mobile-menu__socials-item">
+              <a href="" class="mobile-menu__socials-link">Twitter</a>
+            </li>
+            <li class="mobile-menu__socials-item">
+              <a href="" class="mobile-menu__socials-link">Facebook</a>
+            </li>
+            <li class="mobile-menu__socials-item">
+              <a href="" class="mobile-menu__socials-link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <!-- /header -->
@@ -238,7 +305,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="project-info">
+                <div class="project__info">
                   <h2 class="project__info-heading">
                     Inspiration has no Borders
                   </h2>
@@ -416,5 +483,6 @@
       </div>
     </footer>
     <!-- /footer -->
+    <script src="./../js/mobile-menu.js"></script>
   </body>
 </html>

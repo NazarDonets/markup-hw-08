@@ -1,6 +1,6 @@
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
@@ -8,19 +8,20 @@
     ),
     url("./../img/hero-bg.jpg");
   background-size: cover;
+  object-fit: cover;
   background-color: #2f303a;
 }
 
 .hero__content {
-  max-width: 696px;
+  max-width: 360px;
   text-align: center;
   margin: 0 auto;
 }
 
 .hero__headline {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.61;
   letter-spacing: 0.06em;
   text-align: center;
   text-transform: uppercase;
@@ -48,5 +49,32 @@
   &:focus {
     background-color: $white;
     color: $brand-color;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .hero {
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
+
+  .hero__content {
+    max-width: 360px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+
+  .hero__content {
+    max-width: 696px;
+  }
+
+  .hero__headline {
+    font-size: 44px;
+    line-height: 1.36;
   }
 }
