@@ -44,6 +44,11 @@
   padding: 48px 40px;
 }
 
+.mobile-menu__contacts-link,
+.mobile-menu__socials-link {
+  text-decoration: none;
+}
+
 .mobile-menu__item {
   &:not(:last-child) {
     margin-bottom: 32px;
